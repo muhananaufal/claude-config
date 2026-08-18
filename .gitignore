@@ -29,6 +29,10 @@ file-history/
 # --- Jejak lingkungan shell (bisa memuat env var berisi rahasia) ---
 shell-snapshots/
 
+# --- State sesi & integrasi IDE ---
+sessions/
+ide/
+
 # --- Cache, backup, dan penanda runtime ---
 cache/
 backups/
