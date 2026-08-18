@@ -1,0 +1,56 @@
+# .gitignore untuk ~/.claude
+#
+# Repo ini memversikan KONFIGURASI Claude Code (CLAUDE.md, settings.json,
+# commands/, skills/) - BUKAN state runtime-nya.
+#
+# Dibuat 2026-08-18 setelah audit kebersihan repo.
+#
+# Berkas runtime di bawah ini menyimpan kredensial, transkrip percakapan, dan
+# salinan isi berkas dari SELURUH proyek yang pernah disentuh - tidak satu pun
+# layak masuk repo. Daftar ini bersifat deny-first: kalau ragu sebuah berkas
+# runtime aman atau tidak, tambahkan ke sini.
+
+# --- Kredensial. Jangan pernah dilacak. ---
+.credentials.json
+*.credentials.json
+.claude.json
+
+# --- Transkrip & state percakapan (bisa memuat isi proyek mana pun) ---
+projects/
+history.jsonl
+paste-cache/
+todos/
+tasks/
+plans/
+
+# --- Salinan isi berkas dari proyek yang disunting ---
+file-history/
+
+# --- Jejak lingkungan shell (bisa memuat env var berisi rahasia) ---
+shell-snapshots/
+
+# --- Cache, backup, dan penanda runtime ---
+cache/
+backups/
+.last-cleanup
+.last-update-result.json
+*.bak
+*.bak-v*
+
+# --- Plugin pihak ketiga: bukan tulisan sendiri, ikut upstream ---
+plugins/
+
+# --- Setelan lokal per-mesin ---
+settings.local.json
+
+# --- skills/ adalah TAUTAN, bukan isi ---
+# Isinya milik ~/.gemini/config/skills (SSOT). Di sini ia hanya junction
+# supaya Claude Code bisa menemukannya.
+#
+# Dulu ketujuh entri di sini adalah symlink YANG DILACAK git, dan ketujuhnya
+# menunjuk nama skema lama (skills/golang-mastery, skills/templates) yang sudah
+# lama tidak ada - putus semua tanpa ada yang tahu, sehingga tidak satu pun
+# skill benar-benar tersedia di Claude Code. Melacak tautan lintas-repo membuat
+# kerusakan seperti itu tidak terlihat. Sekarang tidak dilacak; buat ulang
+# junction-nya bila pindah mesin.
+skills/
