@@ -1,6 +1,6 @@
 # /audit — Forensic Quality Gate Audit
 
-Audit repo / direktori kerja saat ini dengan standar exit gate §5.5 `AGENTS.md` plus pemindaian forensik di bawah.
+Audit repo / direktori kerja saat ini dengan standar exit gate §5.7 `AGENTS.md` plus pemindaian forensik di bawah.
 
 ## Yang WAJIB dipindai
 

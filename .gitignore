@@ -58,3 +58,4 @@ settings.local.json
 # kerusakan seperti itu tidak terlihat. Sekarang tidak dilacak; buat ulang
 # junction-nya bila pindah mesin.
 skills/
+chrome/

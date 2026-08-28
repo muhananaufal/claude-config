@@ -65,5 +65,7 @@
     "gopls-lsp@claude-plugins-official": true
   },
   "tui": "fullscreen",
-  "theme": "dark"
+  "theme": "dark",
+  "agentPushNotifEnabled": true,
+  "inputNeededNotifEnabled": true
 }
